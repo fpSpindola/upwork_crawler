@@ -1,0 +1,20 @@
+extends campaign.jade
+
+
+block head
+	title
+		|New Campaign
+
+
+block submit_button
+	input(type='submit', value='Create Campaign').btn.btn-primary
+
+
+block proxy
+	.form-group
+		=form.proxy.label(class='control-label col-xs-3')
+		.col-xs-2
+			.fileUpload.btn.btn-default#upload_button
+				span
+					|Upload
+				=form.proxy(class='form-control upload')

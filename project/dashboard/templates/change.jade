@@ -1,0 +1,40 @@
+extends campaign.jade
+
+
+block head
+	title
+		=campaign.name
+
+
+block submit_button
+	input(type='submit', value='Change Campaign').btn.btn-primary
+
+
+block proxy
+	.form-group
+		=form.proxy.label(class='control-label col-xs-3')
+		.col-xs-2
+			.fileUpload.btn.btn-default#upload_button
+				span
+					|Upload
+				=form.proxy(class='form-control upload')
+		.col-xs-3
+			a(href=url_for('show_proxies', id=campaign.id)).btn.btn-default
+				|Show proxies
+		.col-xs-3
+			a(href=url_for('remove_proxies', id=campaign.id)).btn.btn-default
+				|Remove proxies
+	.form-group
+		label(class='control-label col-xs-3')
+			|Previous filename
+		.col-xs-9(style='text-align: left; padding-left: 15px; padding-top: 7px;')
+			=filename
+
+block logs
+	.form-group
+		label(class='control-label col-xs-3')
+			|Log settings
+		.col-xs-3
+			a(href=url_for('remove_log', id=campaign.id)).btn.btn-default
+				|Remove log
+	hr

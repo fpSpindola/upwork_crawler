@@ -1,0 +1,128 @@
+#dda {
+	width: 80px;
+}
+
+
+#sidebar {
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	/*top: 54px;*/
+	/*z-index: 1000;*/
+	background-color: #f3f3f3;
+	padding-top: 12px;
+}
+
+
+#sidebar li {
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+#sidebar ul {
+	padding-left: 15px;
+}
+
+
+#sidebar a {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 18px;
+	text-decoration: none;
+	color: #666;
+	font-weight: 500;
+	font-size: 15px;
+}
+
+
+#content_container {
+	position: relative;
+	width: 600px;
+	margin-left: 300px;
+	padding: 40px 0 40px 0;
+	height: 100%;
+}
+
+
+#active_container {
+	position: relative;
+	margin-left: 300px;
+	padding: 40px 80px 40px 0;
+	height: 100%;
+}
+
+
+#ua {
+	text-align: left;
+}
+
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+.main_table {
+	/*text-align: center;*/
+	/*margin: 50px;*/
+	border-bottom: 1px solid #dddddd;
+}
+
+
+thead {
+	border-bottom: 2px solid #DBE3E6;
+	color: #b2bbbe;
+}
+
+
+tr {
+	height: 46px;
+}
+
+
+.table>tbody>tr>td {
+	vertical-align: middle;
+}
+
+
+.table>tbody>tr>td:first-child {
+	padding-left: 20px;
+}
+
+
+.table>thead>tr>th:first-child {
+	padding-left: 20px;
+}
+
+
+.table>thead>tr>th {
+	text-align: center;
+}
+
+
+.created {
+	padding-left: 10px;
+}
+
+
+#upload_button {
+	width: 80px;
+	margin-left: 0px;
+	margin-top: 0px;
+}

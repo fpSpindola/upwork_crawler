@@ -1,0 +1,46 @@
+extends base.jade
+
+block head
+	title
+		|All Campaigns
+
+
+block content
+	#active_container.text-center
+		if campaigns
+			table.table
+				thead
+					tr
+						th.col-md-1
+							|Name
+						th.col-md-4
+							|Site
+						th.col-md-2
+							|Start
+						th.col-md-2
+							|End
+						th.col-md-2
+							|Active
+						th.col-md-1
+				tbody
+					for c in campaigns
+						tr
+							td
+								a(href=url_for('log', id=c.id))
+									=c.name
+							td
+								=c.url
+							td
+								=c.length_from
+							td
+								=c.length_to
+							td
+								=c.active
+							td
+								a(href=url_for('change_campaign', id=c.id))
+									|Edit
+								| | 
+								a(href=url_for('remove_campaign', id=c.id))
+									|Remove
+		else
+			|There are no campaigns.

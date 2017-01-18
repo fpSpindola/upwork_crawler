@@ -1,0 +1,235 @@
+extends base.jade
+
+
+block content
+	br
+	#content_container.text-center
+		form(enctype="multipart/form-data", method='POST').form-horizontal
+			=form.csrf_token
+			fieldset
+				legend
+					|General Settings
+				.form-group
+					=form.active.label(class='control-label col-xs-3')
+					.col-xs-1
+						.checkbox
+							label
+								=form.active
+				.form-group
+					=form.name.label(class='control-label col-xs-3')
+					.col-xs-7
+						=form.name(class='form-control')
+				.form-group
+					=form.url.label(class='control-label col-xs-3')
+					.col-xs-7
+						=form.url(class='form-control')
+				.form-group
+					=form.time_on_site_min.label(class='control-label col-xs-3')
+					.col-xs-3
+						=form.time_on_site_min(class='form-control')
+					.col-xs-1
+						|-
+					.col-xs-3
+						=form.time_on_site_max(class='form-control')
+				.form-group
+					=form.pages_min.label(class='control-label col-xs-3')
+					.col-xs-3
+						=form.pages_min(class='form-control')
+					.col-xs-1
+						|-
+					.col-xs-3
+						=form.pages_max(class='form-control')
+				.form-group
+					=form.visits_per_day_min.label(class='control-label col-xs-3')
+					.col-xs-3
+						=form.visits_per_day_min(class='form-control')
+					.col-xs-1
+						|-
+					.col-xs-3
+						=form.visits_per_day_max(class='form-control')
+				.form-group
+					=form.length_from.label(class='control-label col-xs-3')
+					.col-xs-4
+						=form.length_from(class='form-control')
+				.form-group
+					=form.length_to.label(class='control-label col-xs-3')
+					.col-xs-4
+						=form.length_to(class='form-control')
+				.form-group
+					=form.bounce_rate.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.bounce_rate(class='form-control', id='dda')
+			br
+			fieldset
+				legend
+					|Traffic Settings
+				.form-group
+					|Traffic Source
+				.form-group
+					=form.organic_source.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.organic_source(class='form-control', id='dda')
+				.form-group
+					=form.direct_source.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.direct_source(class='form-control', id='dda')
+				.form-group
+					=form.social_source.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.social_source(class='form-control', id='dda')
+				.form-group
+					=form.email_source.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.email_source(class='form-control', id='dda')
+				.form-group
+					=form.referral_source.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.referral_source(class='form-control', id='dda')
+				br
+				.form-group
+					|Organic Search Settings
+				.form-group
+					=form.organic_google.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.organic_google(class='form-control', id='dda')
+				.form-group
+					=form.organic_yahoo.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.organic_yahoo(class='form-control', id='dda')
+				.form-group
+					=form.organic_bing.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.organic_bing(class='form-control', id='dda')
+				.form-group
+					=form.organic_aol.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.organic_aol(class='form-control', id='dda')
+				.form-group
+					=form.organic_keywords.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.organic_keywords(class='form-control')
+				hr
+				br
+				.form-group
+					=form.referral_settings.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.referral_settings(class='form-control')
+				.form-group
+					=form.social_settings.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.social_settings(class='form-control')
+				.form-group
+					|Email settings
+				.form-group
+					=form.e_cs.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.e_cs(class='form-control')
+				.form-group
+					=form.e_cm.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.e_cm(class='form-control')
+				.form-group
+					=form.e_ct.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.e_ct(class='form-control')
+				.form-group
+					=form.e_cc.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.e_cc(class='form-control')
+				.form-group
+					=form.e_cn.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.e_cn(class='form-control')
+				hr
+				br
+				.form-group
+					=form.use_proxy_list.label(class='control-label col-xs-3')
+					.col-xs-1
+						.checkbox
+							label
+								=form.use_proxy_list
+				.form-group
+					=form.use_proxy_api.label(class='control-label col-xs-3')
+					.col-xs-1
+						.checkbox
+							label
+								=form.use_proxy_api
+				.form-group
+					=form.proxy_api_url.label(class='control-label col-xs-3')
+					.col-xs-6
+						=form.proxy_api_url(class='form-control')
+				block proxy
+				.form-group
+					=form.reused_proxy.label(class='control-label col-xs-3')
+					.col-xs-2
+						=form.reused_proxy(class='form-control', id='dda')
+				hr
+				block logs
+				.form-group
+					|User Agent Type
+				#ua
+					.form-group
+						.col-xs-offset-1.col-xs-4
+							.checkbox
+								label
+									=form.ua_safari
+										|Safari
+						.col-xs-4
+							.checkbox
+								label
+									=form.ua_win
+										|Windows
+						.col-xs-3
+							.checkbox
+								label
+									=form.ua_iphone
+										|Iphone
+					.form-group
+						.col-xs-offset-1.col-xs-4
+							.checkbox
+								label
+									=form.ua_firefox
+										|Firefox
+						.col-xs-4
+							.checkbox
+								label
+									=form.ua_mac
+										|Mac
+						.col-xs-3
+							.checkbox
+								label
+									=form.ua_ipad
+										|Ipad
+					.form-group
+						.col-xs-offset-1.col-xs-4
+							.checkbox
+								label
+									=form.ua_ie
+										|Internet Explorer
+						.col-xs-4
+							.checkbox
+								label
+									=form.ua_linux
+										|Linux
+						.col-xs-3
+							.checkbox
+								label
+									=form.ua_android
+										|Android
+					.form-group
+						.col-xs-offset-1.col-xs-4
+							.checkbox
+								label
+									=form.ua_opera
+										|Opera
+					.form-group
+						.col-xs-offset-1.col-xs-4
+							.checkbox
+								label
+									=form.ua_chrome
+										|Google Chrome
+				br
+				br
+				hr
+
+			block submit_button

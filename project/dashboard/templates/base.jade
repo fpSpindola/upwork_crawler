@@ -1,0 +1,27 @@
+!!! 5
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+		script(src="http://code.jquery.com/jquery-2.1.4.min.js")
+		script(src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+		link(rel="stylesheet", href=url_for('static', filename='css/style.css'))
+		block head
+	body
+		.container-fluid
+			.row
+				#sidebar
+					ul
+						li
+							a(href=url_for('main'))
+								|All Campaigns
+						li
+							a(href=url_for('new'))
+								|New Campaign
+						li
+							a(href=url_for('logs'))
+								|Main Log
+			block content

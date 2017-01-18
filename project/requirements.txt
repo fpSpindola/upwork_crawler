@@ -1,0 +1,9 @@
+Flask==0.10.1
+Flask-WTF==0.12
+Jinja2==2.8
+peewee==2.8.0
+pyjade==4.0.0
+requests==2.6.0
+selenium==2.52.0
+WTForms==2.1
+xvfbwrapper==0.2.8
